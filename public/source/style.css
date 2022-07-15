@@ -1,0 +1,1048 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+body{
+    font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #212112;
+	background-position: center;
+	background-repeat: repeat;
+	background-size: 7%;
+	background-color: #fff;
+	overflow-x: hidden;
+    transition: all 200ms linear;
+}
+::selection {
+	color: #fff;
+	background-color: #8167a9;
+}
+::-moz-selection {
+	color: #fff;
+	background-color: #8167a9;
+}
+
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	box-shadow:0 10px 30px 0 rgb(6 6 6 / 50%);
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll-on {
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll-on .navbar-brand img{
+	height: 24px;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navigation-wrap{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar{
+	padding: 0;
+}
+.navbar-brand img{
+	height: 80px;
+	
+	width: auto;
+	display: block;
+ 
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+	border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:before{
+	width: 24px;
+	position: absolute;
+	height: 1px;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after{
+	top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+.btn-outline-primary{
+	color: #fff;
+}
+.nav-link{
+	color: #212121 !important;
+	font-weight: 500;
+	font-size: 22px;
+    transition: all 200ms linear;
+}
+.nav-item:hover .nav-link{
+	color: #1ec6b6 !important;
+}
+.nav-item.active .nav-link{
+	color: #777 !important;
+}
+.nav-link {
+	position: relative;
+	padding: 5px 0 !important;
+	display: inline-block;
+}
+.nav-item:after{
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #1ec6b6;
+	opacity: 0;
+    transition: all 200ms linear;
+}
+.nav-item:hover:after{
+	bottom: 0;
+	opacity: 1;
+}
+.nav-item.active:hover:after{
+	opacity: 0;
+}
+.nav-item{
+	position: relative;
+    transition: all 200ms linear;
+}
+
+
+.bg-light {
+	background-color: #fff !important;
+    transition: all 200ms linear;
+}
+
+.over-hide {
+    overflow: hidden;
+}
+
+
+
+.nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+	max-height: 0;
+    display: block;
+	padding: 0;
+	margin: 0;
+    transition: all 200ms linear;
+}
+.nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+	max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+}
+.dropdown-menu {
+	padding: 10px!important;
+	margin: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #212121;
+	background-color: #fcfaff;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+}
+.dropdown-toggle::after {
+	display: none;
+}
+
+.dropdown-item {
+	padding: 3px 15px;
+	font-size: 17px;
+	line-height: 25px;
+	color: #212121;
+	border-radius: 2px;
+    transition: all 200ms linear;
+}
+.dropdown-item:hover, 
+.dropdown-item:focus {
+	color: #fff;
+	background-color: #1ec6b6;
+}
+
+body.dark{
+	color: #fff;
+	background-color: #1f2029;
+}
+body.dark .navbar-brand img{
+  filter: brightness(100%);
+}
+body.dark h1{
+	color: #fff;
+}
+body.dark h1 span{
+    transition-delay: 0ms !important;
+}
+body.dark p{
+	color: #fff;
+    transition-delay: 0ms !important;
+}
+body.dark .bg-light {
+	background-color: #14151a !important;
+}
+body.dark .start-header {
+	box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+body.dark .start-header.scroll-on {
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+}
+body.dark .nav-link{
+	color: #fff !important;
+}
+body.dark .nav-item.active .nav-link{
+	color: #999 !important;
+}
+body.dark .dropdown-menu {
+	color: #fff;
+	background-color: #1f2029;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+body.dark .dropdown-item {
+	color: #fff;
+}
+body.dark .navbar-light .navbar-toggler-icon {
+	border-bottom: 1px solid #fff;
+}
+body.dark .navbar-light .navbar-toggler-icon:after, 
+body.dark .navbar-light .navbar-toggler-icon:before{
+	background-color: #fff;
+}
+body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+
+@media (max-width: 767px) { 
+	
+	.nav-item:after{
+		display: none;
+	}
+	.nav-item::before {
+		position: absolute;
+		display: block;
+		top: 15px;
+		left: 0;
+		width: 11px;
+		height: 1px;
+		content: "";
+		border: none;
+		background-color: #000;
+	}
+	.dropdown-toggle::after {
+		position: absolute;
+		display: block;
+		top: 10px;
+		left: -23px;
+		width: 1px;
+		height: 11px;
+		content: "";
+		border: none;
+		background-color: #000;
+		transition: all 200ms linear;
+	}
+	.dropdown-toggle[aria-expanded="true"]::after{
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+	.dropdown-menu {
+		padding: 0 !important;
+		background-color: transparent;
+		box-shadow: none;
+		transition: all 200ms linear;
+	}
+	.dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+		margin-top: 10px !important;
+		margin-bottom: 20px !important;
+	}
+	body.dark .nav-item::before {
+		background-color: #fff;
+	}
+	body.dark .dropdown-toggle::after {
+		background-color: #fff;
+	}
+	body.dark .dropdown-menu {
+		background-color: transparent;
+		box-shadow: none;
+	}
+}
+
+.logo {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	display: block;
+	z-index: 100;
+	transition: all 250ms linear;
+}
+.logo img {
+	height: 26px;
+	width: auto;
+	display: block;
+  filter: brightness(10%);
+	transition: all 250ms linear;
+}
+body.dark .logo img {
+  filter: brightness(100%);
+}
+
+  .mySlides {
+	display: none;
+	margin-top: 100px;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+	cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+	text-align: center;
+	width: 50%;
+	margin:0 auto;
+	background-color: #1ec6b6;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 2px 16px;
+	color: #fff;
+  }
+  p#caption{
+	  margin-top: 1rem;
+  }
+  
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column1 {
+	float: left;
+	width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+	opacity: 0.7;
+  }
+  
+  .active,
+  .demo:hover {
+	opacity: 1;
+  }
+
+
+
+.form-booking{
+	position: relative;
+	bottom: 300px;
+	
+}
+  .form-dk{
+	display: inline-block;
+	vertical-align: middle;
+}
+.form-search{
+	display: table;
+	position: relative;
+	margin: 0 auto;
+	padding: 20px;
+	vertical-align: middle;
+	background-color:hsl(0deg 0% 0% / 50%);
+}
+.form-search .form-group{
+	position: relative;
+
+	width: 170px;
+	float: left;
+	margin-bottom: 0;
+}
+.form-search .form-control{
+	border: none;
+	padding-right: 30px;
+	height: 50px;
+	text-align: left;
+	border-right: 1px solid #ccc;
+	border-radius: 0;
+	box-shadow: none;
+}
+.form-group select{
+	margin: 0;
+}
+.form-control:disabled, .form-control[readonly]{
+	background-color: #fff;
+}
+#datepicker i{
+	position: relative;
+	top:20% ;
+	right: 20px;
+	display: inline-block;
+}
+#datepicker1 i{
+	position: relative;
+	top:20% ;
+	right: 20px;
+	display: inline-block;
+}
+.form-search .btn-style-book{
+	width: 160px;
+	height: 50px;
+	border-radius: 0;
+	background-color: #1ec6b6;
+	color: #fff;
+}
+
+.old-price{
+	color: #888;
+	font-size: 13px;
+	margin-bottom: 0;
+}
+.price .new-price{
+	font-size: 18px;
+	font-weight: 600;
+	color: #1ec6b6;
+}
+.star{
+	border-radius: 20px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	z-index: 2;
+	top: 160px;
+	left: 10px;
+
+}
+.star .list-group-item{
+	font-size: 10px;
+	margin: 1px;
+	padding: 0 2px 0 2px;
+	background-color: #fb720d;
+	color: #fff;
+}
+
+.targets {
+    background-color: #F2F2F2;
+    padding: 50px 0;
+}
+
+
+.pink-color {
+    color: #fe4850;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.title {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.text-center {
+    text-align: center!important;
+}
+.targets .target i {
+    float: left;
+    font-size: 32px;
+    color: #fe4850;
+    margin-right: 20px;
+}
+
+.targets .target p {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 20px;
+    color: #666;
+    line-height: 1.7;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.content{
+	padding: 25px;
+}
+.target-name{
+	font-size: 25px;
+	font-weight: bold;
+}
+.quangcao{
+	background-color: #eef8ff;
+	text-align: center;
+}
+
+ .nav-list-icon{
+	line-height: 50px;
+	margin-left: 15px;
+}
+.green {
+    color: #8fc63d;
+}
+.quangcao2{
+	height: 500px;
+	width: 100%;
+	
+}
+.logo-quangcao{
+	height: 200px;	
+}
+
+
+
+
+@media screen and (max-width: 400px){
+	.Como-list-location .List-Location .Row-hexagon .Border-hexagon{
+		width: calc(100% + 16px)!important;
+	}
+	.Como-list-location article{
+		padding: 0 13%!important;
+	}
+	.logo-luxury{
+		text-align: center;
+	}
+	.info-luxury{
+		text-align: center;
+	}
+	img.logo-footer{
+		width: 30%!important;
+		height: 100px!important;
+	}
+	.site-footer{
+		padding: 10px 0 15px!important;
+	}
+	.site-footer h6{
+		font-size: 20px!important;
+	}
+	.footer-links li{
+		font-size: 17px!important;
+		line-height: 40px!important;
+	}
+	.site-footer [class^=col-]{
+		margin-bottom: 10px!important;
+	}
+	.form-booking{
+	
+		position: relative;
+		bottom: -1px;
+		display: block;
+	}
+	.form-search .form-group{
+		
+		width: 100%;
+	
+	}
+	.form-search .form-control{
+		width: 100%;
+	}
+	#datepicker{
+		border-top:1px solid #ccc ;
+	}
+	#datepicker i{
+		left: 225px;
+		top: -35px;
+	}
+	#datepicker1 i{
+		left: 225px;
+		top: -35px;
+	}
+	.mySlides{
+		margin-top: 100px;
+	}
+	.quangcao2{
+		height: 230px;
+		width: 100%;
+		
+	}
+	.quangcao img{
+		width: 35%;
+		height: 35%;
+
+}
+.title{
+	margin-bottom: 20px;
+}
+.quangcao li{
+	line-height: 25px;
+	text-align: left;
+	font-size: 18px;
+}
+p#caption{
+	margin: 0 auto;
+}
+	.caption-container{
+		position: relative;
+		margin: 0 auto;
+		padding: 0.01px 0px;
+		font-size: 16px;
+		width: 100%;
+		align-items: center;
+
+	}
+
+}
+
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  margin-top: 15px;
+ 
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:26px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none;
+  
+}
+.footer-links li
+{
+  display:block;
+  font-size: 20px;
+  line-height: 50px;
+
+}
+.footer-links a
+{
+  color:#737373;
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#f1f1f1;
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+img.logo-footer{
+	width: 50%;
+	height: 170px;
+}
+.account .far-account{
+	color: #1ec6b6;
+}
+.btn-outline-primary:hover{
+	background-color:#17a2b8;
+}
+.btn-outline-primary a:hover{
+	color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.tieude p{
+    font-size: 28px;
+    color: #1abc9c;
+    line-height:38px;
+    margin-bottom: 40px;
+}
+.Como-list-location{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+.Como-list-location article{
+    width: 29%;
+    float: left;
+    padding: 0 2%;
+}
+.Como-list-location .List-Location{
+    position: relative;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    color: #1abc9c;
+
+}
+.Como-list-location .List-Location .Row-hexagon{
+    position: relative;
+}
+.Como-list-location .List-Location .Row-hexagon .Border-hexagon{
+    position: absolute;
+    width: calc(100% + 16px);
+    background: rgb(26 188 156 / 53%);
+    height: calc(100% + 16px);
+    left: -8px;
+    top: -8px;
+    margin: 0 auto;
+    -webkit-clip-path:polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+    clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+
+}
+.Como-list-location article .List-Location .location-image{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-clip-path:polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+    clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+
+}
+.Como-list-location .List-Location .Location-dist{
+    font-weight: 200;
+    top: calc(50% - 85px);
+    left: calc(50% - 85px);
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    white-space: normal;
+    line-height: 170px;
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    background: rgb(26 188 156 / 53%);
+    margin: 0 auto;
+    -webkit-clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+    clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+}
+.List-Location .Location-address{
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.5;
+    color: #fff;
+    position: absolute;
+    background: rgb(26 188 156 / 53%);
+    margin: 0 auto;
+    animation-duration: 0.5s;
+    animation-name: fadeInFromNone;
+    animation-fill-mode: forwards ;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-name: fadeInFromNone;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+    clip-path: polygon(98.66025% 45%, 99.39693% 46.5798%, 99.84808% 48.26352%, 100% 50%, 99.84808% 51.73648%, 99.39693% 53.4202%, 98.66025% 55%, 78.66025% 89.64102%, 77.66044% 91.06889%, 76.42788% 92.30146%, 75% 93.30127%, 73.4202% 94.03794%, 71.73648% 94.48909%, 70% 94.64102%, 30% 94.64102%, 28.26352% 94.48909%, 26.5798% 94.03794%, 25% 93.30127%, 23.57212% 92.30146%, 22.33956% 91.06889%, 21.33975% 89.64102%, 1.33975% 55%, 0.60307% 53.4202%, 0.15192% 51.73648%, 0% 50%, 0.15192% 48.26352%, 0.60307% 46.5798%, 1.33975% 45%, 21.33975% 10.35898%, 22.33956% 8.93111%, 23.57212% 7.69854%, 25% 6.69873%, 26.5798% 5.96206%, 28.26352% 5.51091%, 30% 5.35898%, 70% 5.35898%, 71.73648% 5.51091%, 73.4202% 5.96206%, 75% 6.69873%, 76.42788% 7.69854%, 77.66044% 8.93111%, 78.66025% 10.35898%);
+}
+
+.List-Location .Location-address-content{
+    position: absolute;
+    width: 86%;
+    height: 100px;
+    top: 44%;
+    margin-top: -25px;
+    left: calc(0% - -8%);
+}
+.Como-list-location article:hover .Location-dist{
+    display: none;
+}
+.Como-list-location article:hover .Location-address{
+    display: block;
+}
+
+.cover-text.thanhngang i{
+    font-size: 28px;
+    color: #1abc9c;
+    position: relative;
+    top: -15px;
+}
+.cover-text.thanhngang:before,.cover-text.thanhngang:after{
+    position: absolute;
+    content: "";
+    background-color: #1abc9c;
+    width: 90px;
+    height: 1px;
+}
+.cover-text.thanhngang:before{
+    left: 42.5%;
+}
+.cover-text.thanhngang:after{
+    right: 42.5%;
+}
+
+
+@media only screen and (max-width: 450px) and (min-width: 100px){
+    .Como-list-location{
+        display: block;
+    }
+    .Como-list-location article .List-Location .location-image{
+        height: 270px;
+    }
+
+    .Como-list-location article{
+        float: none;
+    }
+    .Como-list-location article{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 750px) and (min-width: 460px){
+    .Como-list-location article .List-Location .location-image{
+        height: 230px;
+    }
+    .Como-list-location .List-Location .Location-dist{
+        width: 80%;
+        height: 80%;
+        top: calc(50% - 95px);
+        left: calc(50% - 60px);
+    }
+}
+@media only screen and (max-width: 1200px) and (min-width: 760px){
+    .Como-list-location article .List-Location .location-image{
+        height: 250px;
+    }
+}
+.modal-dialog-full-width {
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+	height: auto !important;
+	min-height: 100% !important;
+	border-radius: 0 !important;
+	width: 100%;
+}
+
+.modal-header-full-width  {
+	border-bottom: 1px solid #9ea2a2 !important;
+}
+
+.modal-footer-full-width  {
+	border-top: 1px solid #9ea2a2 !important;
+}
+.header {
+	text-align: center;
+	padding: 32px;
+  }
+
+
+
+  
+
+
+  
+ 

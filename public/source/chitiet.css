@@ -1,0 +1,23 @@
+@media screen and (max-width: 400px){
+    .pakage-thumb{
+     max-width: none;
+     max-height: none;
+     margin: 0 auto;
+    }
+    .media{
+        display: block;
+    }
+    p.tienich{
+        font-size: 15px;
+    }
+    .thanhtoan{
+        margin: 0 auto;
+    }
+    .media-body h5{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .imgNH {
+       text-align: center;
+    }
+}
